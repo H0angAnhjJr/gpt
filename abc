@@ -1,0 +1,23 @@
+public class PalindromeChecker {
+    public boolean isPalindrome(String input) {
+        if (input == null) return false;
+
+        int left = 0, right = input.length() - 1;
+
+        while (left < right) {
+            if (input.charAt(left) != input.charAt(right)) {
+                return false;
+            }
+            left++;
+            right--;
+        }
+
+        return true;
+    }
+
+    public static void main(String[] args) {
+        PalindromeChecker checker = new PalindromeChecker();
+        System.out.println(checker.isPalindrome("racecar"));  // true
+        System.out.println(checker.isPalindrome("hello"));    // false
+    }
+}
