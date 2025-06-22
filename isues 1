@@ -1,0 +1,26 @@
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+public class PalindromeCheckerTest {
+    PalindromeChecker checker = new PalindromeChecker();
+
+    @Test
+    public void testNullInput() {
+        assertFalse(checker.isPalindrome(null));
+    }
+
+    @Test
+    public void testPalindrome() {
+        assertTrue(checker.isPalindrome("madam"));
+    }
+
+    @Test
+    public void testNotPalindrome() {
+        assertFalse(checker.isPalindrome("hello"));
+    }
+
+    @Test
+    public void testSingleChar() {
+        assertTrue(checker.isPalindrome("a"));
+    }
+}
